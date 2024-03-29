@@ -13,7 +13,7 @@ export const candidateRouter = new Hono<{
 /**
  * *MW: Auth routes
  */
-candidateRouter.use("/candidate/*", async (c, next) => {
+candidateRouter.use("/*", async (c, next) => {
     // Check if the user is signed in
     try {
         // Get the auth token from the header
